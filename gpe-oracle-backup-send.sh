@@ -1,18 +1,18 @@
 #!/usr/bin/env sh
 
-# It is required that you put a .token file in the same location as this script.
+# It is required that you put a .gpe-tagset-token file in the same location as this script.
 # This must be a GPE send token with access to the site you wish to write to.
 #
 # Use a similiar command, where token_string is the token you would like to store.
 # Make sure the permissions are correct for the user. Probably oracle, for example:
-# echo "eyJzZWMiOiI3NDdlNzZkZmN..yNWZjM2VlOSJ9" > .token && chmod 640 .token
+# echo "eyJzZWMiOiI3NDdlNzZkZmN..yNWZjM2VlOSJ9" > .gpe-tagset-token && chmod 640 .gpe-tagset-token
 #
 # Access the search facility to search through tags. Add the gpe :site name
 # https://my.galileosuite.com/:customer/tagset/search?range_type=last_60&case_sensitive=falseß
 
 # Some Setup
 GPE_SEND_HOME="$(dirname $0)"; cd "${GPE_SEND_HOME}"
-GPE_SEND_TOKEN=$(head -1 .token)
+GPE_SEND_TOKEN=$(head -1 .gpe-tagset-token)
 GPE_SEND_URL="xfer1.galileosuite.com"
 
 # Set to 1 if -x and post will execute, otherwise print

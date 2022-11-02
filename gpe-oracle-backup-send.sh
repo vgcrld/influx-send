@@ -80,7 +80,7 @@ shift $((OPTIND-1))
 
 GPE_SEND_STRING="oracle_backup,database_name=${GPE_SEND_DB},backup_type=${GPE_SEND_TYPE},action=backup,hostname=$(hostname -s) db_capacity_mib=$GPE_SEND_CAPACITY,transfered_mib=${GPE_SEND_XFER},exit_code=${GPE_SEND_EXITCODE}"
 
-if [ "${GPE_SEND_EXECUTE}" == "1" ]
+if [ "${GPE_SEND_EXECUTE}" = "1" ]
 then
     if ! doPost ; then
       echo "Failed: $?"

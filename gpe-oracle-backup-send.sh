@@ -68,11 +68,11 @@ while getopts "d:t:c:s:z:xh" o; do
 done
 
 # Then check the options
-[ -z ${GPE_SEND_DB} ]       && usage "error, missing database_name (-d)"
-[ -z ${GPE_SEND_TYPE} ]     && usage "error, missing backup_type (-t)"
-[ -z ${GPE_SEND_CAPACITY} ] && usage "error, missing db_capacity_mib (-c)"
-[ -z ${GPE_SEND_EXITCODE} ] && usage "error, missing exit_code (-s)"
-[ -z ${GPE_SEND_XFER} ]     && usage "error, missing transfered_mib (-z)"
+[ -z "${GPE_SEND_DB}" ]       && usage "error, missing database_name (-d)"
+[ -z "${GPE_SEND_TYPE}" ]     && usage "error, missing backup_type (-t)"
+[ -z "${GPE_SEND_CAPACITY}" ] && usage "error, missing db_capacity_mib (-c)"
+[ -z "${GPE_SEND_EXITCODE}" ] && usage "error, missing exit_code (-s)"
+[ -z "${GPE_SEND_XFER}" ]     && usage "error, missing transfered_mib (-z)"
 
 # Now that we have all of our options, shift them off and leave
 # the input args what is left over. 

@@ -27,7 +27,7 @@ usage() {
 
 # Do the post
 doPost() {
-      curl -X POST \
+      /opt/galileo/bin/curl -X POST \
       "https://${GPE_SEND_URL}/ingest/influxdb/atsgroup/write" \
       --header 'Accept: */*' \
       --header 'User-Agent: Galileo-Tagset-Post-Oracle-Backup' \

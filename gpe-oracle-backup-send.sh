@@ -13,7 +13,7 @@
 # Some Setup
 GPE_SEND_HOME="$(dirname $0)"; cd "${GPE_SEND_HOME}"
 GPE_SEND_TOKEN=$(head -1 .gpe-tagset-token)
-GPE_SEND_URL="xfer1.galileosuite.com"
+GPE_SEND_URL="xfer1.ifsend.com"
 
 # Set to 1 if -x and post will execute, otherwise print
 GPE_SEND_EXECUTE=0
